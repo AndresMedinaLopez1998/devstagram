@@ -1,0 +1,95 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.historia {
+
+    display: flex;
+    flex-direction: column;
+    
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    &__img {
+        margin-bottom: 3rem;
+
+        @include m.desktop {
+            margin-bottom: 0;
+        }
+    }
+
+    &__imagen {
+        border-radius: 2.5rem;
+    }
+
+    &__args {
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    &__parrafo {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    &__span {
+        font-weight: normal;
+    }
+
+    &__elemento1 {
+        margin: 0;
+        font-weight: 700;
+    }
+
+    &__elemento2 {
+        font-size: 1.5rem;
+        margin: 0;
+        color: v.$gris;
+    }
+
+    &__elemento3 {
+        margin: 0;
+    }
+
+    &__contenido {
+        padding: 1.7rem;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        background-color: v.$blanco;
+        margin-bottom: 1.5rem;
+        border-radius: 2rem;
+    }
+
+    &__comentario {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    &__mensaje {
+        background-color: v.$verde;
+        padding: 0.7rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem; 
+        color: v.$blanco;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__boton {
+        background-color: v.$grisClaro;
+        border: none;
+    
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+
+}

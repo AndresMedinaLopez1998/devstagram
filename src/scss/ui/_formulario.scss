@@ -1,0 +1,98 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario {
+
+    width: 100%;
+    margin: 0 auto;
+    background-color: v.$blanco;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    &__campo {
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        margin-bottom: 1rem;
+        display: block;
+        text-transform: uppercase;
+        color: v.$gris;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    &__input {
+        border: 1px solid v.$gris;
+        padding: 1.5rem;
+        width: 100%;
+        border-radius: 1.5rem;
+    }
+
+    &__submit {
+        background-color: v.$azulClaro;
+        transition: background-color 300ms ease-in-out;
+        text-transform: uppercase;
+        font-weight: 700;
+        width: 100%;
+        padding: 1.7rem;
+        color: v.$blanco;
+        border-radius: 1.5rem;
+        border: none;
+        
+        &:hover {
+            background-color: v.$azul;
+            cursor: pointer;
+        }
+    }
+
+    &__error {
+        background-color: v.$rojo;
+        color: v.$blanco;
+        margin: 1rem 0;
+        border-radius: 1.5rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &__berror {
+        border: 1px solid v.$rojo;
+    }
+
+    &__mantener {
+        margin-bottom: 1.5rem;
+
+        &--label {
+            color: v.$gris;
+            font-size: 1.4rem;
+            width: 100%;
+        }
+    }
+
+    &__hidden {
+        margin-bottom: 1.7rem;
+    }
+
+    &__eliminar {
+        background-color: v.$rojo;
+        transition: background-color 300ms ease-in-out;
+        text-transform: uppercase;
+        font-weight: 700;
+        width: 100%;
+        padding: 1.7rem;
+        color: v.$blanco;
+        border-radius: 1.5rem;
+        border: none;
+        
+        &:hover {
+            background-color: v.$rojoFuerte;
+            cursor: pointer;
+        }
+    }
+}
+
+.max {
+    max-width: 75rem;
+}

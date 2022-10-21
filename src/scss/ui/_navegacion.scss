@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.desktop {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+
+    &__enlace {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: v.$gris;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+
+        @include m.desktop {
+            margin-bottom: 0;
+        }
+
+        &--span {
+            font-weight: normal;
+            text-transform: lowercase;
+        }
+
+        &--boton {
+            background-color: v.$blanco;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &--crear {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            justify-content: space-between;
+            border: 1px solid v.$grisFuerte;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0.70rem;
+        }
+    }
+}
+
+.camara {
+    width: 2.5rem;
+    height: 2.5rem;
+}
